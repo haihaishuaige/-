@@ -1,0 +1,31 @@
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+body{
+    padding:45px 0 50px;
+}
+.pyg_header{
+    height: 45px;
+    width: 100%;
+    background:pink;
+    position: fixed;
+    top:0;
+    left:0;
+}
+.pyg_footer{
+    height: 50px;
+    width: 100%;
+    background:pink;
+    position: fixed;
+    bottom:0;
+    left:0;
+}
+.pyg_view{
+    height: 100%;
+    overflow: scroll;
+}
