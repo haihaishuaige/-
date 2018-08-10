@@ -1,1 +1,48 @@
-    
+//四个分类
+.four_fenlei {
+    display: flex;
+    flex-wrap: wrap;
+    padding:15px 0 10px;
+    a {
+        flex:1;
+        img{
+            width: 70%;
+            margin:0 auto;
+        }
+    }
+}
+//主体商品
+.pyg_index_shopping{
+    .view_shopping{
+        .header_banner_img{
+            padding:5px 0;
+        }
+        ul{
+            display:flex;
+            flex-wrap: wrap;
+            padding:0 10px;
+            justify-content: space-between;
+            li{
+                width: 49%;
+                padding:0 10px;
+                background:#fff;
+                margin-bottom:5px;
+                .shopping_text{
+                    height: 40px;
+                    overflow: hidden;
+                    font-size: 14px;
+                }
+                .shopping_money{
+                    color:red;
+                }
+                .shopping_xiangsi{
+                    a{
+                        display:block;
+                        width: 75%;
+                        margin:0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -9,6 +9,14 @@
     body{
         padding:45px 0 50px;
     }
+    img{
+        display:block;
+        width: 100%;
+    }
+    ul{
+        list-style: none;
+    }
+    // 固定头部
     .pyg_header{
         height: 45px;   
         width: 100%;
@@ -18,13 +26,29 @@
         padding:5px 10px;
         background:#fff;
     }
+    // 固定底部
     .pyg_footer{
         height: 50px;
         width: 100%;
         position: fixed;
         bottom:0;
         left:0;
+        display:flex;
+        background:#fff;
+        a{
+            flex:1;
+            color:#000;
+            display:flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            span{
+                font-size: 22px;
+                 padding-top:10px;
+            }
+        }
     }
+    //主体
     .pyg_view{
         height: 100%;
         overflow: scroll;

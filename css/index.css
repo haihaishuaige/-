@@ -1,1 +1,59 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+.four_fenlei {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 15px 0 10px;
+}
+
+.four_fenlei a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.four_fenlei a img {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.pyg_index_shopping .view_shopping .header_banner_img {
+  padding: 5px 0;
+}
+
+.pyg_index_shopping .view_shopping ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pyg_index_shopping .view_shopping ul li {
+  width: 49%;
+  padding: 0 10px;
+  background: #fff;
+  margin-bottom: 5px;
+}
+
+.pyg_index_shopping .view_shopping ul li .shopping_text {
+  height: 40px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.pyg_index_shopping .view_shopping ul li .shopping_money {
+  color: red;
+}
+
+.pyg_index_shopping .view_shopping ul li .shopping_xiangsi a {
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=index.css.map */
