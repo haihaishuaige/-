@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="/css/category.css">
     <title>移动端品优购</title>
 </head>
-
 <body>
     <!-- 头部固定定位 -->
     <header class="pyg_header">
@@ -19,6 +18,19 @@
             <input type="search" class="mui-input-clear" placeholder="">
         </div>
     </header>
+    <!-- 主体部分 -->
+    <div class="pyg_view">
+        <div class="left">
+            <ul>
+
+            </ul>
+        </div>
+        <div class="right">
+           <ul>
+             
+           </ul>
+        </div>
+    </div>
     <!-- 尾部固定定位 -->
     <footer class="pyg_footer">
         <a href="/index.html">
@@ -39,10 +51,32 @@
         </a>
     </footer>
 </body>
+<!-- 左边导航模板 -->
+<script id="left_banner" type="text/template">
+    {{each arr val}}
+   <li>{{val.cat_name}}</li>
+   {{/each}}
+</script>
+<!-- 右边导航模板 -->
+<script id="right_banner" type="text/template">
+    {{each data.children val2 index2}}
+     <li> 
+         <h4>{{val2.cat_name}}</h4>
+         <div class="big_box">
+         {{each val2.children val3 index3}}
+             <div>
+             <img src=" http://api.pyg.ak48.xyz/{{val3.cat_icon}}" alt="">
+             <p>{{val3.cat_name}}</p>
+            </div>
+         {{/each}}
+        </div>
+     </li>
+     {{/each}}
+</script>
 <script src="/lib/zepto/zepto.js"></script>
 <script src="/lib/mui/js/mui.min.js"></script>
 <script src="/lib/arttemplate/template-web.js"></script>
+<script src="/lib/iscroll/iscroll.js"></script>
 <script src="/js/common.js"></script>
 <script src="/js/category.js"></script>
-
 </html>
