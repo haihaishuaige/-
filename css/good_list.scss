@@ -1,0 +1,81 @@
+body {
+    padding-top: 90px;
+}
+
+.search_header {
+    height: 45px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #333;
+    ;
+}
+
+.nav {
+    height: 45px;
+    width: 100%;
+    position: fixed;
+    top: 45px;
+    left: 0;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    a {
+        font-size: 18px;
+        color: #0094ff;
+        text-align: center;
+        line-height: 45px;
+    }
+}
+
+.pyg_view {
+    .view_banner {
+        ul {
+            padding: 0 10px;
+            li {
+                margin: 5px 0;
+                background: #fff;
+                a {
+                    display: flex;
+                    .left {
+                        flex: 1;
+                        padding: 0 20px;
+                        img {
+                            width: 85%;
+                            margin: 0 auto;
+                        }
+                    }
+                    .right {
+                        flex: 2;
+                        overflow: hidden;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        position: relative;
+                        &::before {
+                            content: "\f105";
+                            width: 32px;
+                            font-size: 18px;
+                            display: inline-block;
+                            text-align: right;
+                            margin-right: 10px;
+                            font: normal normal normal 14px/1 FontAwesome;
+                            font-size: inherit;
+                            text-rendering: auto;
+                            -webkit-font-smoothing: antialiased;
+                            position: absolute;
+                            right:10px;
+                            top:50%;
+                            margin-top:-5px;
+                            color:#999;
+                        }
+                        span {
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

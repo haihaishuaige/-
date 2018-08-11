@@ -1,0 +1,100 @@
+body {
+  padding-top: 90px;
+}
+
+.search_header {
+  height: 45px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #333;
+}
+
+.nav {
+  height: 45px;
+  width: 100%;
+  position: fixed;
+  top: 45px;
+  left: 0;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav a {
+  font-size: 18px;
+  color: #0094ff;
+  text-align: center;
+  line-height: 45px;
+}
+
+.pyg_view .view_banner ul {
+  padding: 0 10px;
+}
+
+.pyg_view .view_banner ul li {
+  margin: 5px 0;
+  background: #fff;
+}
+
+.pyg_view .view_banner ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyg_view .view_banner ul li a .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 20px;
+}
+
+.pyg_view .view_banner ul li a .left img {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.pyg_view .view_banner ul li a .right {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+}
+
+.pyg_view .view_banner ul li a .right::before {
+  content: "\f105";
+  width: 32px;
+  font-size: 18px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -5px;
+  color: #999;
+}
+
+.pyg_view .view_banner ul li a .right span {
+  color: red;
+}
+/*# sourceMappingURL=good_list.css.map */
