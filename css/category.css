@@ -29,7 +29,6 @@ body {
           flex: 1;
   height: 100%;
   overflow: scroll;
-  background: pink;
 }
 
 .pyg_view .right ul li {
@@ -42,6 +41,11 @@ body {
           flex-direction: column;
 }
 
+.pyg_view .right ul li h5 {
+  color: #0094ff;
+  padding-left: 20px;
+}
+
 .pyg_view .right ul li .big_box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,5 +56,11 @@ body {
 
 .pyg_view .right ul li .big_box div {
   width: 33.333333333%;
+  text-align: center;
+}
+
+.pyg_view .right ul li .big_box div p {
+  font-size: .14rem;
+  color: #000;
 }
 /*# sourceMappingURL=category.css.map */

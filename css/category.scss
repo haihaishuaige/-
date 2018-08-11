@@ -21,16 +21,24 @@ body{
         flex:1;
         height: 100%;
         overflow: scroll;
-        background:pink;
         ul{
             li{
               display:flex;
               flex-direction: column;
+              h5{
+                  color:#0094ff;
+                  padding-left:20px;
+              }
               .big_box{
                 display:flex;
                 flex-wrap: wrap;
                 div{
                     width: 33.333333333%;
+                    text-align: center;
+                  p{
+                      font-size: .14rem;
+                      color:#000;
+                  }
                 } 
               }
             }
