@@ -1,6 +1,5 @@
 $(function(){
     init();
-
     function init(){
         htmlFontSize();
         getCategories();
@@ -23,12 +22,13 @@ $(function(){
         leftScroll = new IScroll(".pyg_view .left");
         
     }
-    var dataId = dataId || 0;
+    // var dataId = dataId || 0;
     //获得商品信息   goods/qsearch
+    var data;
     function getCategories(){
         $.get("categories",function(res){
+            data = res;
             //左边导航栏
-            res = res;
             var htmlLeft = template("left_banner",{arr:res.data});
             $(".left ul").html(htmlLeft);
             Scroll();
@@ -37,27 +37,17 @@ $(function(){
                 borderLeft:'5px solid #0094ff'
             })
             //渲染右边数据
-            var htmlRight = template("right_banner",{data:res.data[dataId]});
+            var htmlRight = template("right_banner",{data:res.data[0]});
             $(".right ul").html(htmlRight);   
-          //获取当前点击的事件 
-          var page =  $('.left ul li').eq(dataId)[0];
-          $('.left ul li').eq(dataId).css({
-            background:'#fff',
-            borderLeft:'5px solid #0094ff'
-        }).siblings().css({
-            background:'',
-            borderLeft:'none'
-        });
-        haha(page);
         })
+
     }
+    
     //左边点击事件
     $(".left ul").on('tap','li',function(e){
         var page = e.target;
         var value =$(this).children('input').val();
         value = value -1 + 1;
-        dataId = value;
-        getCategories();  
       $(this).css({
           background:'#fff',
           borderLeft:'5px solid #0094ff'
@@ -65,8 +55,11 @@ $(function(){
           background:'',
           borderLeft:'none'
       });      
+      haha(value,data);   
     })
-    function haha(page){
-        leftScroll.scrollToElement(page,500);
-    }
+    function haha(value,res){
+        var htmlRight = template("right_banner",{data:res.data[value]});
+        $(".right ul").html(htmlRight).fadeIn(1500); 
+        leftScroll.scrollToElement($(".left li").eq(value)[0],1500)
+    }  
 })

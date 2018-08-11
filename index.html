@@ -109,12 +109,14 @@
     <ul>
             {{each val.goods val2 index2}}
         <li>
-            <!-- 商品图片 -->
-            <img src="{{val2.goods_small_logo}}" alt="">
-            <!-- 商品文字 -->
-            <div class="shopping_text">{{val2.goods_name}}</div>
-            <!-- 商品价格 -->
-            <div class="shopping_money">￥{{val2.goods_price}}</div>
+            <a href="javascript:;">
+                <!-- 商品图片 -->
+                <img src="{{val2.goods_small_logo}}" alt="">
+                <!-- 商品文字 -->
+                <div class="shopping_text">{{val2.goods_name}}</div>
+                <!-- 商品价格 -->
+                <div class="shopping_money">￥{{val2.goods_price}}</div>
+            </a>
             <div class="shopping_xiangsi">
                 <a type="button" class="mui-btn mui-btn-primary mui-btn-outlined">找相似</a>
             </div>

@@ -41,6 +41,12 @@
   margin-bottom: 5px;
 }
 
+.pyg_index_shopping .view_shopping ul li a {
+  color: #000;
+  width: 100%;
+  display: block;
+}
+
 .pyg_index_shopping .view_shopping ul li .shopping_text {
   height: 40px;
   overflow: hidden;
@@ -55,5 +61,6 @@
   display: block;
   width: 75%;
   margin: 0 auto;
+  color: #0094ff;
 }
 /*# sourceMappingURL=index.css.map */

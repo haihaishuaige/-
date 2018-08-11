@@ -28,6 +28,14 @@ body{
               h5{
                   color:#0094ff;
                   padding-left:20px;
+                  display:flex;
+                  span{
+                     flex:1;
+                     height: 1px;
+                     background:#000;
+                     align-self: center;
+                     margin:0 20px;
+                  }
               }
               .big_box{
                 display:flex;
@@ -35,10 +43,18 @@ body{
                 div{
                     width: 33.333333333%;
                     text-align: center;
-                  p{
-                      font-size: .14rem;
-                      color:#000;
-                  }
+                    a{
+                        display:block;
+                        width: 100%;
+                        img{
+                            width: 60%;
+                            display:block;
+                        }
+                        p{
+                            font-size: .14rem;
+                            color:#000;
+                        }
+                    }
                 } 
               }
             }

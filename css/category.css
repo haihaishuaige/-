@@ -44,6 +44,21 @@ body {
 .pyg_view .right ul li h5 {
   color: #0094ff;
   padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyg_view .right ul li h5 span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 1px;
+  background: #000;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 20px;
 }
 
 .pyg_view .right ul li .big_box {
@@ -59,7 +74,17 @@ body {
   text-align: center;
 }
 
-.pyg_view .right ul li .big_box div p {
+.pyg_view .right ul li .big_box div a {
+  display: block;
+  width: 100%;
+}
+
+.pyg_view .right ul li .big_box div a img {
+  width: 60%;
+  display: block;
+}
+
+.pyg_view .right ul li .big_box div a p {
   font-size: .14rem;
   color: #000;
 }

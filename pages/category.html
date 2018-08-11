@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="/lib/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/category.css">
-    <title>移动端品优购</title>
+    <title>移动端分类品优购</title>
 </head>
 
 <body>
@@ -63,22 +63,24 @@
 <script id="right_banner" type="text/template">
     {{each data.children val2 index2}}
     <li>
-        <h5>{{val2.cat_name}}</h5>
+        <h5>{{val2.cat_name}} <span></span> </h5>
         <div class="big_box">
             {{each val2.children val3 index3}}
             <div>
-                <img src=" http://api.pyg.ak48.xyz/{{val3.cat_icon}}" alt="">
-                <p>{{val3.cat_name}}</p>
+                <a href="javascript:;">
+                    <img src=" http://api.pyg.ak48.xyz/{{val3.cat_icon}}" alt="">
+                    <p>{{val3.cat_name}}</p>
+                </a>
             </div>
             {{/each}}
         </div>
     </li>
     {{/each}}
 </script>
-<script src="/lib/zepto/zepto.js"></script>
 <script src="/lib/mui/js/mui.min.js"></script>
 <script src="/lib/arttemplate/template-web.js"></script>
 <script src="/lib/iscroll/iscroll.js"></script>
+<script src="/lib/zepto/zepto.js"></script>
 <script src="/js/common.js"></script>
 <script src="/js/category.js"></script>
 
