@@ -27,9 +27,11 @@
             </ul>
         </div>
         <div class="right">
+            <div>
             <ul>
 
             </ul>
+            </div>
         </div>
     </div>
     <!-- 尾部固定定位 -->
@@ -68,7 +70,7 @@
             {{each val2.children val3 index3}}
             <div>
                 <a href="javascript:;">
-                    <img src=" http://api.pyg.ak48.xyz/{{val3.cat_icon}}" alt="">
+                    <img src="{{iconUrl}}{{val3.cat_icon}}" alt="">
                     <p>{{val3.cat_name}}</p>
                 </a>
             </div>

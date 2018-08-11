@@ -19,9 +19,9 @@ body{
     }
     .right{
         flex:1;
-        height: 100%;
-        overflow: scroll;
+        overflow: hidden;
         ul{
+            height: 100%;
             li{
               display:flex;
               flex-direction: column;

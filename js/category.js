@@ -27,7 +27,7 @@ $(function(){
     var data;
     function getCategories(){
         $.get("categories",function(res){
-            data = res;
+            data = res;    
             //左边导航栏
             var htmlLeft = template("left_banner",{arr:res.data});
             $(".left ul").html(htmlLeft);
@@ -39,8 +39,14 @@ $(function(){
             //渲染右边数据
             var htmlRight = template("right_banner",{data:res.data[0]});
             $(".right ul").html(htmlRight);   
+           var num =  $(".right ul img").length;
+            $(".right ul img").on("load",function(){
+               num--;
+               if(num==0){
+                RightScroll = new IScroll(".right");
+               }              
+            })
         })
-
     }
     
     //左边点击事件
@@ -60,6 +66,13 @@ $(function(){
     function haha(value,res){
         var htmlRight = template("right_banner",{data:res.data[value]});
         $(".right ul").html(htmlRight).fadeIn(1500); 
-        leftScroll.scrollToElement($(".left li").eq(value)[0],1500)
-    }  
+        leftScroll.scrollToElement($(".left li").eq(value)[0],1500);   
+        var num =  $(".right ul img").length;
+        $(".right ul img").on("load",function(){
+            num--;
+               if(num==0){
+                RightScroll = new IScroll(".right");
+               }   
+        })
+    }   
 })

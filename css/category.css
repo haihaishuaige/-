@@ -27,8 +27,11 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  overflow: hidden;
+}
+
+.pyg_view .right ul {
   height: 100%;
-  overflow: scroll;
 }
 
 .pyg_view .right ul li {
