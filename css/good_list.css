@@ -32,6 +32,10 @@ body {
   line-height: 45px;
 }
 
+.pyg_view {
+  position: relative;
+}
+
 .pyg_view .view_banner ul {
   padding: 0 10px;
 }

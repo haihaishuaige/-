@@ -47,20 +47,23 @@
         </a>
     </footer>
 </body>
+<!-- 主体商品模板 -->
 <script id="view_banner" type="text/template">
+    {{each arr val index}}
     <li>
         <a href="javascript:;">
             <div class="left">
-                <img src="http://image2.suning.cn/uimg/b2c/newcatentries/0070078057-000000000634917020_1_400x400.jpg" alt="">
+                <img src="{{val.goods_small_logo}}" alt="">
             </div>
             <div class="right">
                 <p class="mui-ellipsis ">
-                    创维（Skyworth）42X6 42英寸10核智能酷开网络平板液晶电视（黑色）
+                        {{val.goods_name}}
                 </p>
-                <span>￥1898</span>
+                <span>￥{{val.goods_price}}</span>
             </div>
         </a>
     </li>
+    {{/each}}
 </script>
 <script src="/lib/mui/js/mui.min.js"></script>
 <script src="/lib/arttemplate/template-web.js"></script>
