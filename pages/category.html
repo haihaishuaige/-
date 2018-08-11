@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <!-- <span class="fa fa-spinner fa-spin"></span> -->
     <!-- 头部固定定位 -->
     <header class="pyg_header">
         <div class="mui-input-row mui-search">
@@ -69,7 +70,7 @@
         <div class="big_box">
             {{each val2.children val3 index3}}
             <div>
-                <a href="javascript:;">
+                <a href="/pages/good_list.html?cid={{val3.cat_id}}">
                     <img src="{{iconUrl}}{{val3.cat_icon}}" alt="">
                     <p>{{val3.cat_name}}</p>
                 </a>

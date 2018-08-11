@@ -1,55 +1,86 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    }
-    html,body{
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding: 45px 0 50px;
+}
+
+.wait {
+    &::before {
+        position: fixed;
+        top: 0;
+        left: 0;
         height: 100%;
-    }
-    body{
-        padding:45px 0 50px;
-    }
-    img{
-        display:block;
         width: 100%;
+        background: #333;
+        opacity: .8;
+        content:'';
+        z-index:100;
     }
-    ul{
-        list-style: none;
-    }
-    // 固定头部
-    .pyg_header{
-        height: 45px;   
-        width: 100%;
+    &::after {
+        animation: fa-spin 2s infinite linear;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        content: "\f110";
         position: fixed;
-        top:0;
-        left:0;
-        padding:5px 10px;
-        background:#fff;
+        top:50%;
+        left:50%;
+        font-size: 50px;
+        margin-left:-20px;
+        margin-top:-50px;
     }
-    // 固定底部
-    .pyg_footer{
-        height: 50px;
-        width: 100%;
-        position: fixed;
-        bottom:0;
-        left:0;
-        display:flex;
-        background:#fff;
-        a{
-            flex:1;
-            color:#000;
-            display:flex;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            span{
-                font-size: 22px;
-                 margin-top:10px;
-            }
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+} // 固定头部
+.pyg_header {
+    height: 45px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    background: #fff;
+} // 固定底部
+.pyg_footer {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    background: #fff;
+    a {
+        flex: 1;
+        color: #000;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        span {
+            font-size: 22px;
+            margin-top: 10px;
         }
     }
-    //主体
-    .pyg_view{
-        height: 100%;
-        overflow: scroll;
-    }
+} //主体
+.pyg_view {
+    height: 100%;
+    overflow: scroll;
+}

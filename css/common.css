@@ -5,12 +5,42 @@
           box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
   padding: 45px 0 50px;
+}
+
+.wait::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #333;
+  opacity: .8;
+  content: '';
+  z-index: 100;
+}
+
+.wait::after {
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content: "\f110";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  margin-left: -20px;
+  margin-top: -50px;
 }
 
 img {

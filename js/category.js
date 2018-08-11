@@ -65,7 +65,7 @@ $(function(){
     })
     function haha(value,res){
         var htmlRight = template("right_banner",{data:res.data[value]});
-        $(".right ul").html(htmlRight).fadeIn(1500); 
+        $(".right ul").html(htmlRight).fadeIn(1000); 
         leftScroll.scrollToElement($(".left li").eq(value)[0],1500);   
         var num =  $(".right ul img").length;
         $(".right ul img").on("load",function(){

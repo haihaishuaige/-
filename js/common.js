@@ -9,7 +9,18 @@ $(function () {
     // var oobj={};
     // $.ajax(oobj);
     // http://api.pyg.ak48.xyz/api/public/v1/  +   home/swiperdata
+
+    //准备一个存储发送请求次数的变量
+    var ajaxXHR = 0;
     $.ajaxSettings.beforeSend=function (xhr,obj) {
+      ajaxXHR++;
       obj.url=BaseUrl+"api/public/v1/"+ obj.url;
+      $("body").addClass("wait");
+    }
+    $.ajaxSettings.complete = function(){
+      ajaxXHR--;
+      if(ajaxXHR==0){
+        $("body").removeClass("wait");
+      }
     }
   })
