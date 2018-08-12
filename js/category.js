@@ -12,8 +12,8 @@ $(function(){
     //计算字体的随着屏幕的变化而变化
     function htmlFontSize(){
          var htmlSize = 100;
-         var htmlWidth = document.querySelector('html').offsetWidth;
          var big = 375;
+         var htmlWidth = document.querySelector('html').offsetWidth;
         var fz = htmlWidth * htmlSize / big;
         document.querySelector('html').style.fontSize = fz+'px';
     }

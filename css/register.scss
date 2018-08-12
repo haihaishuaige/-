@@ -1,0 +1,53 @@
+//头部
+.pyg_header{
+     text-align: center;
+     line-height: 45px;
+     background:#f7f7f7;
+     color:#646464;
+     div{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        font-size: 30px;
+        a{
+            width: 100%;
+            height: 100%;
+            display:block;
+            &::before{
+                content: "\f104";
+                position: absolute;
+                top: 6px;
+                left: 20px;
+            }
+        }
+     }
+   }
+   //表单
+   .pyg_view{
+       form{
+        margin: 10px;
+       }
+      .queren_btn{
+          text-align: center;
+          button:nth-child(1){
+              position: relative;
+              left:5px;
+          }
+          button{
+              width: 120px;
+              height: 40px;
+          }
+      }
+      .huoqu_yanzhengma{
+          position: absolute;
+          right:3%;
+          button{
+              width:100%;
+              padding-bottom:10px;
+          }
+        //   right:25px;
+        //   padding:10px 0;
+      }
+   }

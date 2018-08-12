@@ -14,10 +14,13 @@ $(function(){
             auto: true,
             //  触发下拉刷新时自动触发
             callback: function () {
+              //重置数据
                 $(".view_banner ul").html('');
+                //重置页码
                 GetSearchObj.pagenum=1;
                 init(function(){
                     mui('.pyg_view').pullRefresh().endPulldownToRefresh();
+                    //重置组件
                     mui('.pyg_view').pullRefresh().refresh(true);
                 });    
             }
@@ -25,6 +28,7 @@ $(function(){
           up:{
             //  触发上拉刷新时自动触发
             callback:function () {
+              //如果没有了，就不做操作
               if(GetSearchObj.pagenum>=contents){
                 mui('.pyg_view').pullRefresh().endPullupToRefresh(true);
                 return;
@@ -32,8 +36,6 @@ $(function(){
               GetSearchObj.pagenum++;
               init(function(){
                 mui('.pyg_view').pullRefresh().endPullupToRefresh();
-                console.log( GetSearchObj.pagenum);
-                console.log(contents);
               });
             }
           }
