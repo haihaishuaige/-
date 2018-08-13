@@ -16,46 +16,47 @@
     <!-- 头部固定定位 -->
     <header class="pyg_header">
         <div>
-            <a href="javascript:;" class="fa fa-angle-left"></a>
+            <a href="/index.html" class="fa fa-angle-left"></a>
         </div> 注册
     </header>
     <div class="pyg_view">
         <form class="mui-input-group">
             <div class="mui-input-row">
                 <label>手机</label>
-                <input type="text" class="mui-input-clear" value="111111111122" placeholder="11位手机号">
+                <input name="mobile" type="text" class="mui-input-clear" value="15915955551" placeholder="11位手机号">
             </div>
             <div class="mui-input-row">
                 <label>验证码</label>
-                <input type="text" placeholder="4位验证码">
+                <input name="code" type="text" placeholder="4位验证码">
+                <!-- 获取验证码按钮 -->
                 <div class="huoqu_yanzhengma">
                     <button type="button" class="mui-btn mui-btn-primary">获取验证码</button>
                 </div>
             </div>
             <div class="mui-input-row">
                 <label>邮箱</label>
-                <input type="text" class="mui-input-clear" value="2@22.com" placeholder="邮箱不能为空">
+                <input name="email" type="text" class="mui-input-clear" value="2@22.com" placeholder="邮箱不能为空">
             </div>
             <div class="mui-input-row">
                 <label>密码</label>
-                <input type="password" class="mui-input-password" placeholder="请输入密码">
+                <input name="pwd" type="password" class="mui-input-password" placeholder="请输入密码">
             </div>
             <div class="mui-input-row">
                 <label>确认密码</label>
-                <input type="password" class="mui-input-password" placeholder="请输入密码">
+                <input name="pwd2" type="password" class="mui-input-password" placeholder="请输入密码">
             </div>
             <div class="mui-input-row mui-radio">
                 <label>男</label>
-                <input name="radio1" type="radio" checked="checked">
+                <input name="gender" name="radio1" type="radio" checked="checked">
             </div>
             <div class="mui-input-row mui-radio">
                 <label>女</label>
-                <input name="radio1" type="radio">
+                <input name="gender" name="radio1" type="radio">
             </div>
         </form>
         <div class="queren_btn">
             <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">返回</button>
-            <button type="button" class="mui-btn mui-btn-primary">注册</button>
+            <button type="button" class="mui-btn mui-btn-primary" id="register_btn">注册</button>
         </div>
     </div>
     <!-- 尾部固定定位 -->

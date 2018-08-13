@@ -1,7 +1,7 @@
 $(function(){
     var GetSearchObj = {
         query:'',
-        cid:getURL('cid'),
+        cid:$.getURL('cid'),
         pagenum:1,
         pagesize:10
     }
@@ -54,14 +54,5 @@ $(function(){
           }       
        })
 
-    }
-
-
-    //获取url地址参数
-     function getURL(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-        var r = window.location.search.substr(1).match(reg);
-        if (r != null) return decodeURI(r[2]);
-        return null;
-      }
+    } 
 })  

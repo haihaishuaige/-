@@ -31,6 +31,10 @@
   margin: 10px;
 }
 
+.pyg_view form input {
+  font-size: 14px;
+}
+
 .pyg_view .queren_btn {
   text-align: center;
 }
@@ -47,7 +51,7 @@
 
 .pyg_view .huoqu_yanzhengma {
   position: absolute;
-  right: 3%;
+  right: 0;
 }
 
 .pyg_view .huoqu_yanzhengma button {
