@@ -7,6 +7,7 @@ $(function(){
     }
     var contents;
     init();
+    login_goods_id();
     mui.init({
         pullRefresh: {
           container: ".pyg_view",
@@ -51,8 +52,15 @@ $(function(){
                 var html = template("view_banner",{arr:res.data.goods})
                  $(".view_banner ul").append(html);
                  callback&&callback();
+                 
           }       
        })
 
     } 
+    function login_goods_id(){
+      $(".view_banner ul").on('tap','a',function(){
+          var detail_URL=$(this).attr("href");
+          location.href = detail_URL ;     
+      })
+    }
 })  

@@ -1,0 +1,88 @@
+.pyg_view {
+  background: #fff;
+}
+
+.pyg_view .view_title {
+  font-size: 16px;
+  padding: 5px 5px;
+}
+
+.pyg_view .view_price {
+  font-size: 20px;
+  color: orange;
+  font-weight: 600;
+}
+
+.pyg_view .view_param ul {
+  list-style: none;
+}
+
+.pyg_view .view_param ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  border-bottom: 1px solid #999;
+}
+
+.pyg_view .view_param ul li span:nth-child(1) {
+  color: #ccc;
+  font-size: 14px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.pyg_view .view_param ul li span:nth-child(2) {
+  color: #666;
+  font-size: 15px;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.pyg_view .view_param ul li:last-child {
+  border-bottom: none;
+}
+
+.pyg_view .view_tab_tool #item1 * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.pyg_view .view_tab_tool #item2 ul {
+  background: #d5d5d9;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.pyg_view .view_tab_tool #item2 ul li .tab_tool_two_title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #333;
+  color: #6d6d72;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.pyg_view .view_tab_tool #item2 ul li .tab_tool_two_name {
+  padding-top: 10px;
+  color: #6d6d72;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyg_view .view_tab_tool #item2 ul li .tab_tool_two_name span:nth-child(1) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.pyg_view .view_tab_tool #item2 ul li .tab_tool_two_name span:nth-child(2) {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+/*# sourceMappingURL=detail.css.map */

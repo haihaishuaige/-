@@ -1,0 +1,73 @@
+.pyg_view{
+    // padding:0 5px;
+    background:#fff;
+    .view_title{
+        font-size: 16px;
+        padding:5px 5px;
+    }
+    .view_price{
+        font-size: 20px;
+        color:orange;
+        font-weight: 600;
+        
+    }
+    .view_param{
+        ul{
+            list-style: none;
+            li{
+                display:flex;
+                padding:5px;
+                border-bottom:1px solid #999; 
+                span:nth-child(1){
+                    color:#ccc;
+                    font-size: 14px;
+                    flex:1;
+                }
+                span:nth-child(2){
+                    color:#666;
+                    font-size: 15px;
+                    flex:2;
+                }
+            }
+            li:last-child{
+                border-bottom:none; 
+            }
+        }
+    }
+    .view_tab_tool{
+        #item1{
+            *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            } 
+        }
+        #item2{
+            ul{
+                background:#d5d5d9;
+                font-size: 14px;
+                line-height: 1;
+                li{
+                    .tab_tool_two_title{
+                       padding-bottom:10px;
+                       border-bottom:1px solid #333;
+                       color:#6d6d72;
+                       font-size: 15px;
+                       font-weight: 600;
+                    }  
+                    .tab_tool_two_name{
+                        padding-top:10px;
+                        color:#6d6d72;
+                        display:flex;
+                        span:nth-child(1){
+                            flex:1;
+                        }
+                        span:nth-child(2){
+                            flex:2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}   

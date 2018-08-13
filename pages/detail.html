@@ -1,12 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="/lib/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/detail.css">
+    <title>商品详情</title>
 </head>
+
 <body>
-    
+    <header id="header" class="mui-bar mui-bar-nav">
+        <h1 class="mui-title">商品详情</h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    </header>
+    <div class="pyg_view">
+
+    </div>
 </body>
+<!-- 模板 -->
+<script id="view_banner_conten" type="text/template">
+    <!-- 轮播图 -->
+    <div class="view_slides">
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="{{data.pics[data.pics.length-1].pics_mid_url}}" />
+                    </a>
+                </div>
+               {{each data.pics val index}}
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="{{val.pics_mid_url}}" />
+                    </a>
+                </div>
+                {{/each}}
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="{{data.pics[0].pics_mid_url}}" />
+                    </a>
+                </div>
+            </div>
+            <!-- 小圆点 -->
+            <div class="mui-slider-indicator">
+                {{each data.pics val index}}
+                {{if index==0}}
+                <div class="mui-indicator mui-active"></div>
+                {{/if}}
+                {{if index!=0}}
+                <div class="mui-indicator"></div>
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <!-- 轮播图 -->
+    <div class="view_big_content">
+        <!-- 介绍标题广告 -->
+        <div class="view_title">{{data.goods_name}} </div>
+        <!-- 介绍标题广告 -->
+        <!-- 价钱 -->
+        <div class="view_price">
+            ￥{{data.goods_price}}
+        </div>
+        <!-- 价钱 -->
+        <!-- 介绍产品参数 -->
+        <div class="view_param">
+            <ul>
+                <li>
+                    <span>已选</span>
+                    <span>白色</span>
+                </li>
+                <li>
+                    <span>促销</span>
+                    <span>是</span>
+                </li>
+                <li>
+                    <span>送至</span>
+                    <span>上海市</span>
+                </li>
+                <li>
+                    <span>运费</span>
+                    <span>免运费</span>
+                </li>
+            </ul>
+        </div>
+        <!-- 介绍产品参数 -->
+        <!-- tab栏切换 -->
+        <div class="view_tab_tool">
+            <!-- 点击切换的按钮 -->
+            <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-positive">
+                <a class="mui-control-item mui-active" href="#item1">
+                    图文详情
+                </a>
+                <a class="mui-control-item" href="#item2">
+                    规格参数
+                </a>
+            </div>
+            <!-- 展开的内容 -->
+            <div class="view_tab_content">
+                <div id="item1" class="mui-control-content mui-active">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell">
+                            {{@data.goods_introduce}}
+                        </li>
+                    </ul>
+                </div>
+                <div id="item2" class="mui-control-content">
+                    <ul class="mui-table-view">
+                        {{each data.attrs value index}}
+                        <li class="mui-table-view-cell">
+                            <div class="tab_tool_two_title">
+                                {{value.attr_name.split("-")[0]}}
+                            </div>
+                            <div class="tab_tool_two_name">
+                                <span> {{value.attr_name.split("-")[1]}}</span>
+                                <span>{{value.attr_vals}}</span>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- tab栏切换 -->
+</script>
+<!-- 模板 -->
+<script src="/lib/zepto/zepto.js"></script>
+<script src="/lib/mui/js/mui.min.js"></script>
+<script src="/lib/arttemplate/template-web.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/detail.js"></script>
+
 </html>
