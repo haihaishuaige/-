@@ -42,6 +42,50 @@
          var email_txt = $("[name='email']").val().trim();
          var pwd_txt = $("[name='pwd']").val().trim();
          var pwd2_txt = $("[name='pwd2']").val().trim();
-         var gender_txt = $("[name='gender']").val().trim();
+         var gender_txt = $("[name='gender']:checked").val();
+         //判断手机
+          if(!$.checkPhone(mobile_txt)){
+            mui.toast("你的手机不合法")
+            return;
+          }
+          //判断验证码   长度4位
+          if(code_txt.length<4){
+            mui.toast("验证码不合法")
+            return;
+          }
+          //判断邮箱
+          if(!$.checkEmail(email_txt)){
+                mui.toast("邮箱不合法")
+                return;
+          }
+          //判断密码
+          if(pwd_txt.length<6){
+            mui.toast("密码不合法")
+            return;
+          }
+          //判断确认密码
+          if(pwd2_txt!=pwd_txt){
+            mui.toast("两次密码不一致")
+            return;
+          }
+          //经历重重困难，到下面就是全部合法 发送请求
+          $.post("users/reg",{
+              mobile:mobile_txt,
+              code:code_txt,
+              email:email_txt,
+              pwd:pwd_txt,
+              gender:gender_txt
+          },function(res){
+              if(res.meta.status==200){
+                mui.toast(res.meta.msg);
+                setTimeout(function(){
+                    location.href = "/pages/login.html";
+                },1500)
+              }else{
+                mui.toast(res.meta.msg);
+                return;
+              }
+              
+          })
      })
  })
