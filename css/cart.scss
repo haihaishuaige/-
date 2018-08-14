@@ -1,0 +1,156 @@
+  body{
+      display:none;
+  }
+  @keyframes Right{
+     0%{
+         color:purple;
+     }
+     50%{
+         color:#0094ff;
+     }
+     100%{
+        color:orange;
+     }
+  }
+  .pyg_view {
+      padding: 10px;
+      .pyg_peisong {
+          .pyg_peisong_title {
+              color: #666;
+              font-size: 14px;
+          }
+          .pyg_peisong_dizhi {
+              padding: 7px 5px;
+              background: #fff;
+              display: flex;
+              align-items: center;
+              position: relative;
+              margin-top:3px;
+              &::before{
+                display: inline-block;
+                font-family: Muiicons;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1;
+                text-decoration: none;
+                -webkit-font-smoothing: antialiased;
+                content: "\e583";
+                position: absolute;
+                right:10px;
+                top:50%;
+                transform: translate(-50% ,-50%);
+                color:#999;
+              }
+              .mui-icon {
+                  flex: 1;
+                  text-align: center;
+              }
+              .pyg_peisong_dizhi_tool {
+                  flex: 4;
+                  .pyg_peisong_dizhi_one {
+                      font-size: 16px;
+                  }
+                  .pyg_peisong_dizhi_two {
+                      font-size: 12px;
+                      color:#666;
+                  }
+              }
+          }
+      }
+    //   订单
+    .pyg_dingdan{
+        margin-top:40px;
+       
+       
+        .pyg_dingdan_title{
+            font-size: 14px;
+            color:#666;
+        }
+        .pyg_dingdan_price{
+            display:flex;
+            justify-content: space-between;
+            padding:10px 25px;
+            background:#fff;
+            position: relative;
+            font-size: 14px;
+            &::before{
+                display: inline-block;
+                font-family: Muiicons;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1;
+                text-decoration: none;
+                -webkit-font-smoothing: antialiased;
+                content: "\e583";
+                position: absolute;
+                right:-5px;
+                top:50%;
+                transform: translate(-50% ,-50%);
+                color:#999;
+              }
+            .pyg_dingdan_price_left{}
+            .pyg_dingdan_price_right{
+               animation: Right infinite 1s;
+            }
+        }
+    }
+    //购物车商品
+    .pyg_shopping{
+        margin-top:40px;
+        .pyg_shopping_title{
+            color:#666;
+            font-size: 14px;
+            padding-bottom:5px;
+        }
+        ul{
+            li{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                background:#fff;
+                padding:10px ;
+                .mui-checkbox{
+                    flex:1;
+                    input{
+                        position:static;
+                    }
+                }
+                .pyg_shopping_img{
+                    flex:2;
+                    padding-right:10px;
+                }
+                .pyg_shopping_content{
+                    flex:6;
+                    .pyg_shopping_content_top{
+                        font-size: 15px;
+                        color:#666;
+                        padding:5px 0;
+                    }
+                    .pyg_shopping_content_bottom{}
+                }
+            }
+        }
+    }
+  }
+  .delete_btn{
+      display:none;
+  }
+  .mui-checkbox{
+      display:none;
+  }
+  .mui-numbox{
+      display:none;
+  }
+  body.big_box{
+      .delete_btn{
+          display:block;
+      }
+      .mui-checkbox{
+          display:block;
+      }
+      .mui-numbox{
+        display:inline-block;
+    }
+  }
