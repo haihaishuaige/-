@@ -46,6 +46,14 @@ $(function () {
       } else {　　　　
           return false;
       }
+  },
+  token:function(){
+    var token;
+    token = JSON.parse(localStorage.getItem('token_data')).token?JSON.parse(localStorage.getItem('token_data')).token:'';
+    return token;
+  },
+  checktoken:function(){
+    return localStorage.getItem('token_data');
   }
   })
 })

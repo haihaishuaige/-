@@ -34,7 +34,7 @@ $(function () {
             //存起来当前路径
             localStorage.setItem('location_url', location.href);
               //点击的时候，先判断有没有token  没有就跳转
-              if(!localStorage.getItem('token_data')){
+              if(!$.checktoken()){
                 mui.toast("请先登录");
                 setTimeout(function () {
                     location.href = "/pages/login.html";
@@ -50,7 +50,7 @@ $(function () {
                 goods_price: getDetail.goods_price,
                 goods_small_logo: getDetail.goods_small_logo
             }
-            var token = JSON.parse(localStorage.getItem('token_data')).token;
+            var token = $.token();
             //需要发送请求头 要用ajax发送
             $.ajax({
                 url: 'my/cart/add',
