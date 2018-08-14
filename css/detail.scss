@@ -71,3 +71,28 @@
         }
     }
 }   
+footer{
+    display:flex;
+    height:45px;
+    a{
+        flex:1;
+        font-size: 14px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;;
+        align-items: center;
+        color:#a79292;
+        border-left:1px solid #ccc;
+    }
+    a:nth-child(-n+2){
+        margin-top:15px;
+    }
+    a:nth-child(3){
+        background:linear-gradient(to right top,#0094ff,orange,red);
+        color:#fff;
+    }
+    a:nth-child(4){
+        background:linear-gradient(to right top ,purple,#2f7db4,yellow);
+        color:#fff;
+    }
+}

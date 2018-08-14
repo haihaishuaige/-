@@ -9,8 +9,7 @@ $(function () {
     }
     //发送ajax获取动态数据
     function getDetail(){
-       $.get("goods/detail",{goods_id:goods_id},function(res){
-           console.log(res);       
+       $.get("goods/detail",{goods_id:goods_id},function(res){    
            if(res.meta.status==200){
                 var html = template("view_banner_conten",{data:res.data});$(".pyg_view").html(html);       //初始化轮播图
                 var gallery = mui('.mui-slider');
