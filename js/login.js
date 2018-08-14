@@ -23,6 +23,8 @@
                 mui.toast("密码不合法");
                 return;
              }
+             var location_url = localStorage.getItem('location_url');
+             
              //验证都合法就发送ajax
              $.post("login",{
                  username:Phone_txt,
@@ -30,9 +32,15 @@
              },function(res){
                  //判断回来的数据 查看是否登陆成功
                  if(res.meta.status==200){
+                     //存起来接受过来的data数据 复杂类型转换
+                     localStorage.setItem('token_data',JSON.stringify(res.data));
                     mui.toast(res.meta.msg);
                     setTimeout(function(){
-                        location.href = "/index.html";
+                        if(location_url){
+                            location.href = location_url;
+                        }else{
+                            location.href = "/index.html";  
+                        }  
                     },1500)
                  }else{
                     mui.toast(res.meta.msg);
