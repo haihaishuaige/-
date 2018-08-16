@@ -1,0 +1,33 @@
+  body{
+      display:none;
+  }
+  .pyg_view{
+      .tab_qiehuan{
+          background:#fff;
+      }
+      .tab_menu{
+          margin:20px;
+          background:#fff;
+      }
+      #item1{
+          ul{
+        //    padding-left:15px;
+          }li{
+              margin-left:15px;
+            display:flex;
+            padding-bottom:10px;
+            padding-top:10px;
+            border-bottom: 1px solid #888;
+            .left{
+                overflow: hidden;
+                flex:3;
+            }
+            .right{
+              flex:1;
+              color:red;
+          }
+          }
+         
+          
+      }
+  }

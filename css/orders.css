@@ -1,0 +1,37 @@
+body {
+  display: none;
+}
+
+.pyg_view .tab_qiehuan {
+  background: #fff;
+}
+
+.pyg_view .tab_menu {
+  margin: 20px;
+  background: #fff;
+}
+
+.pyg_view #item1 li {
+  margin-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #888;
+}
+
+.pyg_view #item1 li .left {
+  overflow: hidden;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.pyg_view #item1 li .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: red;
+}
+/*# sourceMappingURL=orders.css.map */
