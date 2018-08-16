@@ -54,6 +54,9 @@ $(function () {
   },
   checktoken:function(){
     return localStorage.getItem('token_data');
+  },
+  setURL:function(){
+    localStorage.setItem("location_url", location.href);
   }
   })
 })

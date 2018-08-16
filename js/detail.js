@@ -17,14 +17,18 @@ $(function () {
         }, function (res) {
             getDetail = res.data;
             if (res.meta.status == 200) {
-                var html = template("view_banner_conten", {
-                    data: res.data
-                });
-                $(".pyg_view").html(html); //初始化轮播图
-                var gallery = mui('.mui-slider');
-                gallery.slider({
-                    interval: 1500 //自动轮播周期，若为0则不自动播放，默认为0；
-                });
+                if(res.data.pics!=''){
+                    var html = template("view_banner_conten", {
+                        data: res.data
+                    });
+                    $(".pyg_view").html(html); //初始化轮播图
+                    var gallery = mui('.mui-slider');
+                    gallery.slider({
+                        interval: 1500 //自动轮播周期，若为0则不自动播放，默认为0；
+                    });
+                } else{
+                    $('body').html('这个页面没有数据')
+                }
             }
         })
     }
@@ -32,7 +36,7 @@ $(function () {
     function addCart() {
         $('.add_goods').on('tap', function () {
             //存起来当前路径
-            localStorage.setItem('location_url', location.href);
+            $.setURL();
               //点击的时候，先判断有没有token  没有就跳转
               if(!$.checktoken()){
                 mui.toast("请先登录");

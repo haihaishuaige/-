@@ -5,7 +5,7 @@
          //先判断用户是否登陆 
          if (!$.checktoken()) {
              //跳到登陆页面 保存现在的地址
-             localStorage.setItem("location_url", location.href);
+            $.setURL();
              location.href = "/pages/login.html";
              return;
          }
@@ -36,7 +36,7 @@
                          prices();
                      }
                  } else {
-                     localStorage.setItem("location_url", location.href);
+                     $.setURL();
                      location.href = "/pages/login.html";
                      return;
                  }
@@ -91,10 +91,6 @@
                     mui.toast('你点了取消');
                  }
              })
-
-
-
-
          })
      }
      //点击动态计算价格
