@@ -8,42 +8,48 @@
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="/lib/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/orders.css">
-    <title>我的订单</title>
+    <link rel="stylesheet" href="/css/me.css">
+    <title>个人中心</title>
 </head>
 
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-        <h1 class="mui-title">订单</h1>
+        <h1 class="mui-title">个人中心</h1>
     </header>
     <div class="pyg_view">
-        <!-- 切换栏 -->
-        <div class="tab_qiehuan">
-            <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary">
-                <a class="mui-control-item mui-active" href="#item1">
-                    全部
-                </a>
-                <a class="mui-control-item " href="#item2">
-                    待付款
-                </a>
-                <a class="mui-control-item" href="#item3">
-                    待发货
-                </a>
-            </div>
-        </div>
-        <!-- 切换栏 -->
-        <!-- tab菜单 -->
-        <div class="tab_menu">
-            <div id="item1" class="mui-control-content mui-active">
-                <ul>
+        <!--个人信息-->
+        <div class="userName">
 
-                </ul>
-            </div>
-            <div id="item2" class="mui-control-content ">正在开发中</div>
-            <div id="item3" class="mui-control-content">正在开发中</div>
         </div>
-        <!-- tab菜单 -->
+        <!-- 订单管理 -->
+        <div class="order_guanli">
+            <div class="top">订单管理</div>
+            <div class="bottom">
+                <a href="javascript:;">
+                    <span class="fa fa-cc-discover"></span>
+                    <div>待付款</div>
+                </a>
+                <a href="javascript:;">
+                    <span class="fa fa-cc-discover"></span>
+                    <div>待收货</div>
+                </a>
+                <a href="javascript:;">
+                    <span class="fa fa-cc-discover"></span>
+                    <div>退款\售后</div>
+                </a>
+                <a href="/pages/orders.html">
+                    <span class="fa fa-cc-discover"></span>
+                    <div>全部订单</div>
+                </a>
+            </div>
+        </div>
+        <!-- 退出登陆按钮 -->
+        <div class="goOut_login">
+            <button type="button" class="mui-btn mui-btn-danger">
+                退出登录
+            </button>
+        </div>
     </div>
     <!-- 尾部固定定位 -->
     <footer class="pyg_footer">
@@ -66,20 +72,16 @@
     </footer>
 </body>
 <script id="pyg_main" type="text/template">
-    {{each data val index}}
-    <li>
-        <div class="left">
-            <span>订单编号</span>
-            <div class="mui-ellipsis ">{{val.order_number}}</div>
-        </div>
-        <div class="right">￥{{val.order_price}}</div>
-    </li>
-    {{/each}}
+    <span class="mui-icon mui-icon-contact  user_heads"></span>
+    <div class=" user_nums">
+        <div class="userPhone">{{data.username}}</div>
+        <div class="userEmail">{{data.user_email}}</div>
+    </div>
 </script>
 <script src="/lib/zepto/zepto.js"></script>
 <script src="/lib/mui/js/mui.min.js"></script>
 <script src="/lib/arttemplate/template-web.js"></script>
 <script src="/js/common.js"></script>
-<script src="/js/orders.js"></script>
+<script src="/js/me.js"></script>
 
 </html>
