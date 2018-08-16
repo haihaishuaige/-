@@ -12,6 +12,7 @@
          $("body").fadeIn(200);
          getAll();
          editBtn();
+         add_dingdan();
      }
      //发送ajax my/cart/all
      function getAll() {
@@ -123,6 +124,7 @@
              $('.pyg_dingdan_price_left span').text(prices_nums)
          }
      }
+     //同步购物车
      function tongbu(infos){
         var token = $.token();
         $.ajax({
@@ -139,5 +141,52 @@
             }
         })
      }
-
+     //点击生成订单
+     function add_dingdan(){
+         $('.pyg_dingdan_price_right').on('tap',function(){
+            var lis = $('.pyg_shopping ul li');
+            //判断没有数据不更改
+            if(lis.length==0){
+                mui.toast('没有订单哦');
+                return;
+            }
+            if($(".edit_btn").text()=='完成'){
+                //在编辑状态不能提交
+                mui.toast('请先编辑完吧')
+                return;
+            }
+            var param = {
+                order_price:$('.pyg_dingdan_price_left span').text(),
+                consignee_addr:'吉山小巷子',
+                goods:[]
+            }
+            //获取id 件数 每件的价钱
+             for(var i = 0;i<lis.length;i++){
+                 var li = lis[i];
+                  var obj = $(li).data('price');
+                  var tmp = {
+                    goods_id:obj.goods_id,
+                    goods_number:$(li).find('.mui-numbox-input').val(),
+                    goods_price:obj.goods_price
+                  }     
+                  param.goods.push(tmp);
+             }
+            $.ajax({
+                url:'my/orders/create',
+                type:'post',
+                data:param,
+                headers:{Authorization:$.token()},
+                success:function(res){
+                    if(res.meta.status==200){
+                        mui.toast(res.meta.msg);
+                        setTimeout(function(){
+                            location.href = "/pages/orders.html";
+                        },1000)
+                    }else{
+                        mui.toast(res.meta.msg);
+                    } 
+                }
+            })  
+         })
+     }
  })
