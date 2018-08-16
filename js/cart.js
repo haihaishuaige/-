@@ -43,8 +43,8 @@
              }
          })
      }
-     //切换按钮
      function editBtn() {
+        //切换按钮
          $(".edit_btn").on('tap', function () {
              $('body').toggleClass("big_box");
              if ($('body').hasClass('big_box')) {
@@ -52,6 +52,21 @@
                  $(".pyg_shopping_img").css('padding', '0')
              } else {
                  $(this).text('编辑');
+                 //获取更新的个数，发送ajax
+                 var lis = $('.pyg_shopping ul li');
+                 //判断没有数据不更改
+                 if(lis.length==0){
+                     mui.toast('没有东西被编辑啦');
+                     return;
+                 }
+                 //获取到数据 发送到后台更新
+                 var infos = {};
+                 for(var i = 0;i<lis.length;i++){
+                     var obj = $(lis[i]).data('price');
+                     obj.amount = $('.mui-numbox-input')[i].value;
+                     infos[obj.goods_id] = obj;    
+                 }   
+                 tongbu(infos);   
              }
          })
          //================
@@ -73,20 +88,8 @@
                          infos[obj.goods_id] = obj ; 
                         }
                      //发送ajax请求 Authorization
-                     var token = $.token();
-                     $.ajax({
-                         url:'my/cart/sync',
-                         type:'post',
-                         data:{infos:JSON.stringify(infos)},
-                         headers:{Authorization:token},
-                         success:function(res){
-                             if(res.meta.status==200){
-                                getAll();
-                             }else{
-                                 mui.toast(res.meta.msg)
-                             }
-                         }
-                     })
+                    
+                     tongbu(infos);
                  }else{
                     mui.toast('你点了取消');
                  }
@@ -119,6 +122,22 @@
              }
              $('.pyg_dingdan_price_left span').text(prices_nums)
          }
+     }
+     function tongbu(infos){
+        var token = $.token();
+        $.ajax({
+            url:'my/cart/sync',
+            type:'post',
+            data:{infos:JSON.stringify(infos)},
+            headers:{Authorization:token},
+            success:function(res){
+                if(res.meta.status==200){
+                   getAll();
+                }else{
+                    mui.toast(res.meta.msg)
+                }
+            }
+        })
      }
 
  })

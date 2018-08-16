@@ -13,7 +13,7 @@
 </head>
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
-        <h1 class="mui-title">购物车清单</h1>
+        <h1 class="mui-title">购物车</h1>
         <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined mui-pull-left delete_btn">删除</button>
         <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined mui-pull-right edit_btn">编辑</button>
     </header>
@@ -97,7 +97,7 @@
                 <span>{{val.goods_price}}</span>
                     <div class="mui-numbox" data-numbox-min='1' data-numbox-max='{{val.goods_number}}'>
                             <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
-                            <input class="mui-numbox-input" type="number" />
+                            <input class="mui-numbox-input" type="number" value="{{val.amount}}"/>
                             <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
                     </div>
             </div>
