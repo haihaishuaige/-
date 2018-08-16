@@ -76,6 +76,8 @@ $(function () {
                             mui.toast("继续购物吧");
                            }
                         })
+                    }else{
+                        mui.toast(res.meta.msg);
                     }
                 }
             })
